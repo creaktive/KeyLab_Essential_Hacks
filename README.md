@@ -13,6 +13,6 @@ To activate add _KeyLab Essential2_ as *another* Control Surface in MIDI prefere
 ![Ableton Live Preferences](https://i.imgur.com/JyMziTk.png)
 
 Reference projects:
- - https://richardmedek.com/2016/01/13/ableton-live-and-akais-endless-encoders/
- - https://julienbayle.studio/ableton-live-midi-remote-scripts/
- - https://drolez.com/blog/music/arturia-keylab-ableton-setup.php
+ - [Ableton Live and Akai’s Endless Encoders](https://richardmedek.com/2016/01/13/ableton-live-and-akais-endless-encoders/)
+ - [Live 10.1 MIDI Remote Python Scripts Sources uncompiled](https://julienbayle.studio/ableton-live-midi-remote-scripts/) ([GitHub repo](https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts))
+ - [Setup your Arturia Keylab essential for Ableton Live](https://drolez.com/blog/music/arturia-keylab-ableton-setup.php)
