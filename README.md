@@ -15,3 +15,4 @@ To activate add _KeyLab Essential2_ as *another* Control Surface in MIDI prefere
 Reference projects:
  - https://richardmedek.com/2016/01/13/ableton-live-and-akais-endless-encoders/
  - https://julienbayle.studio/ableton-live-midi-remote-scripts/
+ - https://drolez.com/blog/music/arturia-keylab-ableton-setup.php
