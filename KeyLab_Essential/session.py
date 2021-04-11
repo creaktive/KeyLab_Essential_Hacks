@@ -1,5 +1,6 @@
 #Embedded file name: /Users/versonator/Jenkins/live/output/Live/mac_64_static/Release/python-bundle/MIDI Remote Scripts/KeyLab_Essential/session.py
 from __future__ import absolute_import, print_function, unicode_literals
+from builtins import range
 from ableton.v2.base import listens, product
 from ableton.v2.control_surface.components import SceneComponent as SceneComponentBase, SessionComponent as SessionComponentBase
 from .clip_slot import ClipSlotComponent
@@ -64,7 +65,7 @@ class SessionComponent(SessionComponentBase):
                 slot.set_led(led)
 
         else:
-            for x, y in product(xrange(self._session_ring.num_tracks), xrange(self._session_ring.num_scenes)):
+            for x, y in product(range(self._session_ring.num_tracks), range(self._session_ring.num_scenes)):
                 scene = self.scene(y)
                 slot = scene.clip_slot(x)
                 slot.set_led(None)

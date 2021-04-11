@@ -1,5 +1,6 @@
 #Embedded file name: /Users/versonator/Jenkins/live/output/Live/mac_64_static/Release/python-bundle/MIDI Remote Scripts/KeyLab_Essential/keylab_essential.py
 from __future__ import absolute_import, print_function, unicode_literals
+from builtins import range
 import Live
 from ableton.v2.base import const, inject, listens
 from ableton.v2.control_surface import ControlSurface, Layer, MIDI_CC_TYPE, MIDI_PB_TYPE
@@ -69,11 +70,11 @@ class KeyLabEssential(ControlSurface):
         self._left_arrow_button = create_button(98, u'Left_Arrow_Button')
         self._right_arrow_button = create_button(99, u'Right_Arrow_Button')
         self._marker_button = create_button(84, u'Marker_Button')
-        self._pads = ButtonMatrixElement(rows=[[ create_button(col + 36, u'Pad_%d' % (col,), channel=10) for col in xrange(8) ]], name=u'Pad_Matrix')
-        self._pad_leds = ButtonMatrixElement(rows=[[ create_pad_led(column + 112, u'Pad_LED_%d' % (column,)) for column in xrange(8) ]], name=u'Pad_LED_Matrix')
-        self._faders = ButtonMatrixElement(rows=[[ SliderElement(msg_type=MIDI_PB_TYPE, channel=index, identifier=None, name=u'Fader_%d' % (index,)) for index in xrange(8) ]], name=u'Faders')
+        self._pads = ButtonMatrixElement(rows=[[ create_button(col + 36, u'Pad_%d' % (col,), channel=10) for col in range(8) ]], name=u'Pad_Matrix')
+        self._pad_leds = ButtonMatrixElement(rows=[[ create_pad_led(column + 112, u'Pad_LED_%d' % (column,)) for column in range(8) ]], name=u'Pad_LED_Matrix')
+        self._faders = ButtonMatrixElement(rows=[[ SliderElement(msg_type=MIDI_PB_TYPE, channel=index, identifier=None, name=u'Fader_%d' % (index,)) for index in range(8) ]], name=u'Faders')
         self._master_fader = SliderElement(MIDI_PB_TYPE, 8, identifier=None, name=u'Master_Fader')
-        self._encoders = ButtonMatrixElement(rows=[[ create_ringed_encoder(index + 16, index + 48, u'Device_Encoder_%d' % (index,)) for index in xrange(8) ]])
+        self._encoders = ButtonMatrixElement(rows=[[ create_ringed_encoder(index + 16, index + 48, u'Device_Encoder_%d' % (index,)) for index in range(8) ]])
         self._jogwheel = EncoderElement(MIDI_CC_TYPE, 0, 60, Live.MidiMap.MapMode.relative_smooth_signed_bit, name=u'Jogwheel')
 
     def _create_hardware_settings(self):
